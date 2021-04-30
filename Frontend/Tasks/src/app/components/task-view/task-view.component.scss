@@ -1,0 +1,136 @@
+.container {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.lists {
+    background: #a8dadcb0;
+    min-height: 80vh;
+    position: relative;
+
+    .title {
+        position: absolute;
+        top: 15px;
+        left: 20px
+    }
+
+    .edit {
+        position: absolute;
+        right: 205px;
+    }
+
+    .delete {
+        position: absolute;
+        right: 140px;
+    }
+
+    &__box {
+        transform: translateY(90px);
+        height: 70%;
+        margin-top: -25px;
+        
+
+        .list__item {
+            background-color: white;
+            margin: 25px;
+            padding: 10px;
+            border-radius: 22px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(.98);
+            }
+        }
+
+        .is-active {
+            background-color: rgb(248, 241, 232);
+        }
+    }
+}
+
+.tasks {
+    position: relative;
+
+    .title {
+        position: absolute;
+        top: 15px;
+        left: 20px
+    }
+
+    .logout {
+        font-size: 27px;
+        color: rgb(136, 133, 133);
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    &__box {
+        transform: translateY(90px);
+        display: flex;
+        justify-content: center;
+
+        .task__item {
+            width: 70%;
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 22px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            position: relative;
+
+            &.complete {
+                text-decoration : line-through;
+                opacity: 0.5 !important;
+            }
+            
+            &:hover {
+                transform: scale(.98);
+            }
+
+            .controls {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+
+                i{
+                    padding: 13px;
+                    margin: auto;
+                    background-color: rgb(235, 232, 232);
+
+                    &:last-child {
+                        border-top-right-radius: 22px;
+                        border-bottom-right-radius: 22px;
+                    }
+
+                    &:hover {
+                        background-color: rgb(206, 205, 205);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    background: white;
+    border-radius: 20px;
+    padding: 7px 22px 7px 22px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: scale(.98);
+    }
+}
+
+
+
+
+

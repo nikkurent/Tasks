@@ -1,0 +1,38 @@
+<div class="d-flex align-items-center min-vh-100" style="width: 90%; margin: auto;">
+    <div class="container">
+
+        <h1 class="title">Login</h1>
+
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="controls">
+                <div class="mb-4">
+                    <input
+                        name="email"
+                        ngModel
+                        type="email"
+                        class="form-control"
+                        required
+                        placeholder="email"><i class="fas fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="mb-3">
+                    <input  
+                        name="password"
+                        ngModel
+                        type="password"
+                        class="form-control"
+                        required
+                        minlength="8"
+                        placeholder="password"><i class="fas fa-lock"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn" >
+              Login
+            </button>
+            <a routerLink="/sign-in" >Dont have an account?</a>
+        </form>
+    </div>
+</div>

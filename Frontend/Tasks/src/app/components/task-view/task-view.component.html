@@ -1,0 +1,58 @@
+
+
+<div class="d-flex align-items-center min-vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 lists">
+
+                <h1 class="title">Lists</h1>
+
+                <div class="lists__box overflow-auto" >
+                    <div
+                        *ngFor="let list of lists"
+                        class="list__item"
+                        routerLinkActive="is-active"
+                        [routerLink]="['/lists', list._id]">{{ list.title }}
+                    </div>
+                </div>
+
+                <button class="btn" (click)="addListClick()">+ Add List</button>
+                <button class="btn edit" [disabled]="buttonDisabled()" (click)="editList()"><i class="far fa-edit"></i></button>
+                <button class="btn delete" (click)="deleteList()"><i class="far fa-trash-alt"></i></button>
+            </div>
+
+    
+            <div class="col-8 tasks">
+
+                <h1 class="title">Tasks</h1>
+                <i class="fas fa-sign-out-alt logout" (click)="logout()"></i>
+                
+                <div class="tasks__box" *ngFor="let task of tasks">
+                    <div
+                        class="task__item"
+                        (click)="toggleCompleted(task)"
+                        [ngClass]="{complete: task.completed}">
+                        
+                        {{task.title}}
+
+                        <div class="controls">
+                            <i
+                                class="far fa-edit"
+                                onclick=event.stopPropagation()
+                                (click)="editTask(task)">
+                            </i>
+
+                            <i
+                                class="far fa-trash-alt"
+                                onclick=event.stopPropagation()
+                                (click)="deleteTask(task._id)">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" [disabled]="buttonDisabled()" (click)="addTaskClick()">+ Add Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+    

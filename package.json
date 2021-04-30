@@ -1,0 +1,28 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Frontend": "cd Frontend/Tasks && npm start",
+    "API": "cd API && nodemon app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run API\" \"npm run Frontend\"",
+    "heroku-postbuild": "cd Frontend/Tasks && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.6"
+  },
+  "engines": {
+    "node": "14.15.4",
+    "npm": "6.14.10"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23"
+  }
+}

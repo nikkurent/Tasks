@@ -1,0 +1,7 @@
+<form>
+    <h1 class="title">Create Task</h1>
+    <div class="input-group mb-3">
+        <input #taskTitle type="text" class="form-control" placeholder="Enter task here...">
+        <button class="btn btn-outline-secondary" (click)="addTask(taskTitle.value)"  id="button-addon2">Add</button>
+    </div>
+</form>

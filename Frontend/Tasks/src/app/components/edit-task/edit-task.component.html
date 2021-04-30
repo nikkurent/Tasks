@@ -1,0 +1,11 @@
+<form>
+    <h1 class="title">Edit Task</h1>
+    <div class="input-group mb-3">
+        <input #taskTitle type="text" class="form-control" [placeholder]="task">
+        <button
+            class="btn btn-outline-secondary"
+            (click)="editTask(taskTitle.value)"
+            id="button-addon2">Update
+        </button>
+    </div>
+</form>

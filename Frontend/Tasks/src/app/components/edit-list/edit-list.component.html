@@ -1,0 +1,12 @@
+<form>
+    <h1 class="title">Edit List</h1>
+    <div class="input-group mb-3">
+        <input #listInput type="text" class="form-control"  [placeholder]="listTitle">
+        <button
+            type="submit"
+            class="btn btn-outline-secondary"
+            (click)="editList(listInput.value)"
+            id="button-addon2">Update
+        </button>
+    </div>
+</form>

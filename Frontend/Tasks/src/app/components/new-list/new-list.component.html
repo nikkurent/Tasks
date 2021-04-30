@@ -1,0 +1,11 @@
+<form>
+    <h1 class="title">Create List</h1>
+    <div class="input-group mb-3">
+        <input #listTitle type="text" class="form-control" placeholder="Enter List here...">
+        <button
+            class="btn btn-outline-secondary"
+            (click)="addList(listTitle.value)" 
+            id="button-addon2">Add
+        </button>
+    </div>
+</form>

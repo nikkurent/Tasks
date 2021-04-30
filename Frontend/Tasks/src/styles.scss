@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    text-shadow: 2px 2px 18px rgba($color: #000000, $alpha: 0.3);
+    color: #14213d;
+}
+
+input:focus {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all .5s ease;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+}
+
+.lists__box {
+    @include scrollbars(.45em, rgb(177, 209, 218));
+}
